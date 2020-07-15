@@ -47,7 +47,6 @@ describe "Owners Controller" do
       fill_in "pet[name]", :with => "Caldwell"
       click_button "Create Owner"
       @owner = Owner.last
-      @pet = Pet.last
       expect(@owner.name).to eq("Sophie")
       expect(@owner.pets.first.name).to eq("Caldwell")
     end
